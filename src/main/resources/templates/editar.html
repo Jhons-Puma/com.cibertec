@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Crear/Editar Persona</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <h1>Crear/Editar Persona</h1>
+  <form th:action="@{/personas/guardar}" method="post">
+    <input type="hidden" name="idPersona" th:value="${persona.idPersona}">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" th:value="${persona.nombre}">
+    </div>
+    <div class="mb-3">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="apellido" name="apellido" th:value="${persona.apellido}">
+    </div>
+    <div class="mb-3">
+      <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+      <input type="text" class="form-control" id="tipoDocumento" name="tipoDocumento" th:value="${persona.tipoDocumento}">
+    </div>
+    <div class="mb-3">
+      <label for="numeroDocumento" class="form-label">Número de Documento</label>
+      <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento" th:value="${persona.numeroDocumento}">
+    </div>
+    <div class="mb-3">
+      <label for="sexoPersona" class="form-label">Sexo del Usuario</label>
+      <input type="text" class="form-control" id="sexoPersona" name="sexoPersona" th:value="${persona.sexoPersona}">
+    </div>
+    <div class="mb-3">
+      <label for="telefPersona" class="form-label">Teléfono del Usuario</label>
+      <input type="text" class="form-control" id="telefPersona" name="telefPersona" th:value="${persona.telefPersona}">
+    </div>
+    <div class="mb-3">
+      <label for="emailPersona" class="form-label">Email del Usuario</label>
+      <input type="text" class="form-control" id="emailPersona" name="emailPersona" th:value="${persona.emailPersona}">
+    </div>
+    <div class="mb-3">
+      <label for="passwordPersona" class="form-label">Contraseña del Usuario</label>
+      <input type="password" class="form-control" id="passwordPersona" name="passwordPersona" th:value="${persona.passwordPersona}">
+    </div>
+    <button type="submit" class="btn btn-success">Guardar</button>
+  </form>
+</div>
+</body>
+</html>
